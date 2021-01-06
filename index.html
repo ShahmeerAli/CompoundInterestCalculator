@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table">
+            <thead>
+              <tr>
+                <h1 class="text-center">Input</h1>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label for="">Principal Amount (P) </label></td>
+                <td><input type="number" name="" id="input1" /></td>
+              </tr>
+              <tr>
+                <td><label for="">Annual Interest Rate (r) </label></td>
+                <td><input type="number" name="" id="input2" /></td>
+              </tr>
+              <tr>
+                <td><label for=""> Years of Growth (t)</label></td>
+                <td><input type="number" name="" id="input3" /></td>
+              </tr>
+              <tr>
+                <td><label for=""> Start Date </label></td>
+                <td><input type="date" name="" id="input4" /></td>
+              </tr>
+              <tr>
+                <td><label for=""> Compound Frequency (n) </label></td>
+                <td>
+                  <select name="option" id="input5" onchange="changeHandler1()">
+                    <option value="1">Annual (1)</option>
+                    <option value="2">Semi-Annual (2)</option>
+                    <option value="4">Quarterly (4)</option>
+                    <option value="6">Bi-Monthly (6)</option>
+                    <option value="12">Monthly (12)</option>
+                    <option value="24">Semi-Monthly (24)</option>
+                    <option value="26">Bi-Weekly (26)</option>
+                    <option value="52">Weekly (52)</option>
+                    <option value="365">Daily (365)</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="">Payment (A) </label></td>
+                <td><input type="number" name="" id="input6" /></td>
+              </tr>
+              <tr>
+                <td><label for="">Payment Frequency (p) </label></td>
+                <td>
+                  <select name="" id="input7" onchange="changeHandler2()">
+                    <option value="1">Annual (1)</option>
+                    <option value="2">Semi-Annual (2)</option>
+                    <option value="4">Quarterly (4)</option>
+                    <option value="6">Bi-Monthly (6)</option>
+                    <option value="12">Monthly (12)</option>
+                    <option value="24">Semi-Monthly (24)</option>
+                    <option value="26">Bi-Weekly (26)</option>
+                    <option value="52">Weekly (52)</option>
+                    <!-- <option value="365">Daily (365)</option> -->
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        <button onclick="calculate()">Calculate</button>
+        </div>
+        <div class="col-md-6">
+          <table class="table">
+            <thead>
+              <tr>
+                <h1 class="text-center">Result</h1>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Rate Per Payment Period</td>
+                <td id="td1"></td>
+              </tr>
+
+              <tr>
+                <td>Total Payments</td>
+                <td id="td2"></td>
+              </tr>
+
+              <tr>
+                <td>Total Payments + Principal</td>
+                <td id="td3"></td>
+              </tr>
+
+              <tr>
+                <td>Total Interest</td>
+                <td id="td4"></td>
+              </tr>
+
+              <tr>
+                <td>Future Value (F)</td>
+                <td id="td5"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- table  -->
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Date</th>
+                <th scope="col">Payment</th>
+                <th scope="col">Principal + Payments</th>
+                <th scope="col">Interest</th>
+                <th scope="col">Cumulative Interest</th>
+                <th scope="col">Balance</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
