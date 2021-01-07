@@ -20,8 +20,11 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
+      <h1 class="text-center mt-5">Compound Interest Calculator</h1>
+      <div class="row mt-5">
         <div class="col-md-6">
+          <div class="card">
+            <div class="card-body pb-0">
           <table class="table">
             <thead>
               <tr>
@@ -83,9 +86,14 @@
               </tr>
             </tbody>
           </table>
-        <button onclick="calculate()">Calculate</button>
+        <button class="btn mb-2" onclick="calculate()">Calculate</button>
         </div>
-        <div class="col-md-6">
+      </div>
+        </div>
+
+        <div class="col-md-6" id="right" style="display: none;">
+          <div class="card">
+            <div class="card-body pb-0">
           <table class="table">
             <thead>
               <tr>
@@ -119,10 +127,17 @@
               </tr>
             </tbody>
           </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-5" id="chart" style="display: none;">
+        <div class="col-md-12">
+          <canvas id="myChart"></canvas>
         </div>
       </div>
       <!-- table  -->
-      <div class="row">
+      <div class="row" id="table" style="display: none;">
         <div class="col-md-12">
           <table class="table text-center">
             <thead>
@@ -161,6 +176,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="app.js"></script>
   </body>
 </html>
